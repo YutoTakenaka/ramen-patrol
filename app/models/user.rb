@@ -8,7 +8,9 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname
+    validates :image
     validates :email, uniqueness: true
+
   end
 
   validates :password, presence: true, length: { minimum: 6 }
