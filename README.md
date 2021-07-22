@@ -1,24 +1,54 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| email    | string | null: false,unique: true |
+| password | string | null: false |
+| nickname     | string | null: false |
 
-* Ruby version
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many : posts
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## posts テーブル
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| ramen_name  | string | null: false |
+| shop_name| string| null: false |
+| place | string   | null: false |
+| price  | integer       |  null: false          |
+| soup_id  | integer       |  null: false           |
+| noodle_id | integer       |  null: false         |
+| caption  | text       |  null: false        |
+| user   | references |             |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
 
-* Deployment instructions
+- belongs_to : users
+- belongs_to : post_tag
 
-* ...
+## tags テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| name   | string    |        |
+
+### Association
+
+- belongs_to : post_tag
+
+## post_tags テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| tag  | references |             |
+| post | references |          |
+### Association
+
+- has_many :posts
+- has_many :tags
