@@ -7,9 +7,10 @@ class Noodle < ActiveHash::Base
     { id: 5, name: '中細麺' },
     { id: 6, name: '細麺' },
     { id: 7, name: '極細麺' },
-    { id: ８, name: 'その他' }
+    { id: 8, name: 'その他' }
   ]
 
-  extend ActiveHash::Associations::ActiveRecordExtensions
-    has_many :posts
+  include ActiveHash::Associations
+  has_many :posts
+
   end

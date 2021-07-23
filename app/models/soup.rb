@@ -11,6 +11,7 @@ class Soup < ActiveHash::Base
     { id: 9, name: 'その他' }
   ]
 
-  include ActiveHash::Associations::ActiveRecordExtensions
-    has_many :posts
+  include ActiveHash::Associations
+  has_many :posts
+
   end

@@ -3,8 +3,8 @@ class Post < ApplicationRecord
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-    belongs_to :soup
-    belongs_to :noodle
+  belongs_to :soup
+  belongs_to :noodle
 
   with_options presence: true do
     validates :ramen_name
