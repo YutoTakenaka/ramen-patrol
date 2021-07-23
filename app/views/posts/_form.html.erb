@@ -30,7 +30,7 @@
   <div class="field">
     <%= f.label :price , "値段" %><br />
     <span class="indispensable">必須</span>
-    <%= f.text_field :price, id:"price" %>
+    <%= f.text_field :price, id:"price" %>円
   </div>
 
   <div class="field">
@@ -54,5 +54,6 @@
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 <% end %>
