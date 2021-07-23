@@ -10,7 +10,7 @@ class Post < ApplicationRecord
     validates :ramen_name
     validates :shop_name
     validates :place
-    validates :price
+    validates :price, format: { with: /\d/,message: "is invalid." }
     validates :soup_id
     validates :noodle_id
     validates :caption
