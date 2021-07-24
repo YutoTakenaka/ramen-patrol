@@ -1,43 +1,47 @@
-<%= form_with model: post , local: true do |f|%>
+<%= form_with model:@post , local: true do |f|%> 
+
+<%= render 'shared/error_messages', model: f.object %>
+
+
   <div class="field">
     <%= f.label :image , "ラーメンの画像" %><br />
-     <span class="indispensable">必須</span>
-    <%= f.file_field :image, id:"ramen_image" %>
+    <span class="indispensable">必須</span>
+    <%= f.file_field :image, id:"ramen_image" %> 
   </div>
   
   <div class="field">
     <%= f.label :ramen_name , "ラーメンの名称" %><br />
-     <span class="indispensable">必須</span>
+    <span class="indispensable">必須</span>
     <%= f.text_field :ramen_name, id:"ramen_name" %>
   </div>
 
   <div class="field">
     <%= f.label :shop_name , "店名" %><br />
-     <span class="indispensable">必須</span>
+    <span class="indispensable">必須</span>
     <%= f.text_field :shop_name, id:"shop_name" %>
   </div>
 
   <div class="field">
     <%= f.label :place , "場所" %><br />
-     <span class="indispensable">必須</span>
+    <span class="indispensable">必須</span>
     <%= f.text_field :place, id:"place" %>
   </div>
 
   <div class="field">
     <%= f.label :price , "値段" %><br />
-     <span class="indispensable">必須</span>
-    <%= f.text_field :price, id:"price" %>
+    <span class="indispensable">必須</span>
+    <%= f.text_field :price, id:"price" %>円
   </div>
 
   <div class="field">
     <%= f.label :soup_id , "スープ" %><br />
-      <span class="indispensable">必須</span>
+    <span class="indispensable">必須</span>
     <%= f.collection_select(:soup_id, Soup.all, :id, :name, {}, {class:"select-box", id:"soup"}) %>
   </div>
 
   <div class="field">
-    <%= f.label :noodle_id , "麺" %><br />
-     <span class="indispensable">必須</span>
+    <%= f.label :noodle_id , "麺の太さ" %><br />
+    <span class="indispensable">必須</span>
     <%= f.collection_select(:noodle_id, Noodle.all, :id, :name, {}, {class:"select-box", id:"noodle"}) %>
   </div>
 
@@ -50,5 +54,6 @@
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 <% end %>

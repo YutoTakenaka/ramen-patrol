@@ -47,52 +47,10 @@
     </div>
 
   <% end %>
-
-  <div class="content">
-    <div class="content_header">
-      <div class="user_icon">
-        <%= image_tag 'star.png' ,class: :user_img %>
-      </div>
-      <div class="username">
-        <%= link_to "ユーザーネーム" , "#", class: :username %>
-      </div>
-      <div class="show">
-        <%= link_to "#",method: :get do %>
-          <%= image_tag 'show-btn.png',class: :show_icon %>
-        <% end %>
-      </div>
-    </div>
-    <div class="content_body">
-    <%= link_to "#",method: :get do %>
-      <%= image_tag 'ramen-sigi.png', size: '400x300', class: 'ramen_img' %>
-    <% end %>
-    </div>
-    <div class="content_footer">
-      <div class="ramen_info">
-        <div class="ramen_content">
-          <div class="ramen_name">
-            <%= "ラーメンの名前"  %>
-          </div>
-          <div class="shop_name">
-            <%= "店の名前" %>
-          </div>
-          <div class="place">
-            <%= "場所" %>
-          </div>
-        </div>
-        <div class="heart">
-          <%= "♡" %> 
-        </div>
-      </div>
-    <p class="show_path">
-      <%= link_to "...詳しく見る", "#", class: :show_path_content %>
-    </p>
-    </div>
-  </div>
   
 </div>
   
-<%= link_to "#" , class: 'post-btn' do %>
+<%= link_to new_post_path , class: 'post-btn' do %>
   <span class='post-btn-text'>パトロールする</span>
   <%= image_tag 'new.png' , size: '185x50' ,class: "post-btn-icon" %>
 <% end %>
