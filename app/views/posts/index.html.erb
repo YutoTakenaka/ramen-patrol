@@ -7,7 +7,7 @@
         <div class="content_header">
       <div class="user_icon">
         <%= link_to "#",method: :get do %>
-          <%= image_tag post.user.image ,class: :user_img %>
+          <%= image_tag post.user.image ,size: '50x50',class: :user_img %>
         <% end %>
       </div>
       <div class="username">
@@ -24,7 +24,7 @@
                 <%= link_to '編集', edit_post_path(post.id),method: :get %>
               </li>
               <li>
-                <%= link_to '削除', "#", method: :delete %>
+                <%= link_to '削除', post_path(post.id), method: :delete , data: { confirm: '本当に削除しますか？' }%>
               </li>
             <% end %>
           </ul>
