@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_post ,only: [:show]
 
   def index
     @posts = Post.all.order('created_at DESC')
@@ -17,9 +18,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:image ,:ramen_name ,:shop_name ,:place ,:price ,:soup_id ,:noodle_id ,:caption).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
