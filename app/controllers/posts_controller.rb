@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post ,only: [:show]
+  before_action :authenticate_user!, except: [:show, :index]
+  before_action :set_post ,only: [:show ,:edit ,:update]
 
   def index
     @posts = Post.all.order('created_at DESC')
@@ -19,6 +20,18 @@ class PostsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+    
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post.id), method: :get
+    else
+      render  :edit
+    end
   end
 
   private

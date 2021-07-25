@@ -11,7 +11,7 @@
             <%= image_tag 'show-btn.png',size: '50x50',class: :show_icon %>
             <ul class="more_list">
               <li>
-                <%= link_to '編集', "#",method: :get %>
+                <%= link_to '編集',edit_post_path(@post.id),method: :get %>
               </li>
               <li>
                 <%= link_to '削除', "#", method: :delete %>
