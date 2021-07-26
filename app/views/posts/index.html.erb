@@ -3,60 +3,7 @@
 <div class="contents">
 
   <% @posts.each do |post| %>
-     <div class="content">
-        <div class="content_header">
-      <div class="user_icon">
-        <%= link_to "#",method: :get do %>
-          <%= image_tag post.user.image ,size: '50x50',class: :user_img %>
-        <% end %>
-      </div>
-      <div class="username">
-        <%= link_to post.user.nickname , "#", class: :username %>
-      </div>
-      <div class="show">
-          <%= image_tag 'show-btn.png',size: '50x50',class: :show_icon %>
-          <ul class="more_list">
-            <li>
-              <%= link_to '詳細', post_path(post.id), method: :get %>
-            </li>
-            <% if user_signed_in? && current_user.id == post.user_id %>
-              <li>
-                <%= link_to '編集', edit_post_path(post.id),method: :get %>
-              </li>
-              <li>
-                <%= link_to '削除', post_path(post.id), method: :delete , data: { confirm: '本当に削除しますか？' }%>
-              </li>
-            <% end %>
-          </ul>
-      </div>
-    </div>
-    <div class="content_body">
-      <%= link_to post_path(post.id),method: :get do %>
-        <%= image_tag post.image, size: '400x300', class: 'ramen_img' %>
-      <% end %>
-    </div>
-    <div class="content_footer">
-      <div class="ramen_info">
-        <div class="ramen_content">
-          <div class="ramen_name">
-            <%= post.ramen_name  %>
-          </div>
-          <div class="shop_name">
-            <%= post.shop_name %>
-          </div>
-          <div class="place">
-            <%= post.place %>
-          </div>
-        </div>
-        <div class="heart">
-          <%= "♡" %> 
-        </div>
-      </div>
-    <p class="show_path">
-      <%= link_to "...詳しく見る", post_path(post.id),method: :get , class: :show_path_content %>
-    </p>
-    </div>
-
+    <%= render partial: "posts/ramen", locals: {post: post} %>
   <% end %>
   
 </div>
