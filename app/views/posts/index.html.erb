@@ -7,11 +7,12 @@
   <% end %>
   
 </div>
-  
-<%= link_to new_post_path , class: 'post-btn' do %>
-  <span class='post-btn-text'>パトロールする</span>
-  <%= image_tag 'new.png' , size: '185x50' ,class: "post-btn-icon" %>
-<% end %>
+<div class="post-btn">
+  <%= link_to new_post_path , class: 'post_btn' do %>
+    <span class='post-btn-text'>Go Patrol</span>
+    <%= image_tag 'new.png' , size: '185x50' ,class: "post-btn-icon" %>
+  <% end %>
+</div>
 
 <%= render "shared/footer" %>
 

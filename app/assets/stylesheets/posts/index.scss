@@ -1,0 +1,104 @@
+.contents{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 30px 0;
+  background-color: #f5f6f7;
+  width: 100%;
+  .content {
+    width: 30vw;
+    background-color: #fff;
+    padding: 0 10px;
+    box-sizing: border-box;
+    &_header {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      .user_icon {
+        img {
+          width: 50px;
+          border-radius: 50%;
+          border: 1px solid #51515196;
+        }
+      }
+      .username {
+        padding-left: 15px;
+        width: 75%;
+      }
+      .show {
+        color: gray;
+        img {
+          width: 30px;
+        }
+      }
+    }
+    &_footer {
+      padding: 15px 0;
+      .ramen_info {
+        display: flex;
+        justify-content: space-between;
+        .footer-text {
+          padding-bottom: 3px;
+          position: relative;
+          &::before {
+            position: absolute;
+            bottom: -238px;
+            left: -5px;
+            width: 20px;
+            transform: scale(0.04);
+            opacity: 0.5;
+            filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
+          }
+          &:nth-child(1)::before {
+            content: url(../img/noodles.png);
+          }
+          &:nth-child(2)::before {
+            content: url(../img/shop.png);
+          }
+          &:nth-child(3)::before {
+            content: url(../img/map-spot.png);
+          }
+          img {
+            width: 20px;
+             transform: scale(1);
+            padding-right: 10px;
+          }
+          p {
+            display: inline-block;
+            padding-left: 35px;
+          }
+        }
+      }
+      .show_path {
+        text-align: right;
+        color: gray;
+      }
+    }
+  }
+}
+
+.post-btn{
+  border-radius: 50%;
+}
+.post_btn {
+    width: 120px;
+    background: #cb3737;
+    text-align: center;
+    border-radius: 4%;
+    bottom: 40px;
+    right: 40px;
+    position: fixed;
+    padding: 15px;
+    border-radius: 50%;
+  .post-btn-text {
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  .post-btn-icon {
+    width: 60%;
+  }
+}
