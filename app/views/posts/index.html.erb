@@ -8,10 +8,7 @@
   
 </div>
 <div class="post-btn">
-  <%= link_to new_post_path , class: 'post_btn' do %>
-    <span class='post-btn-text'>Go Patrol</span>
-    <%= image_tag 'new.png' , size: '185x50' ,class: "post-btn-icon" %>
-  <% end %>
+  <%= link_to image_tag('go-patrol.png'),new_post_path , class: 'post_btn'  %>
 </div>
 
 <%= render "shared/footer" %>
