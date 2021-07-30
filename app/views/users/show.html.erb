@@ -2,12 +2,16 @@
 
 <div class="user_info">
   <div class="user_info_left">
-    <%= link_to image_tag(@user.image ,size: '100x100'), '#',class:"user_icon" %>
+    <%= link_to image_tag(@user.image ,size: '50x50'), '#',class:"user_icon" %>
   </div>
   <div class="user_info_right">
-    <div class="right_user_name">
-      <%= @user.nickname %>
-      <%= link_to "プロフィールを編集", "#",class: "user_edit" %>
+    <div class="grid-1">
+      <div class="right_user_name">
+        <%= @user.nickname %>
+      </div>
+      <div class="user_edit">
+        <%= link_to "プロフィールを編集", "#" %>
+      </div>    
     </div>
     <div class="post_amount">
       <%= "パトロール件数#{@user.posts.length}件" %>
