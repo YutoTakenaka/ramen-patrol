@@ -1,0 +1,23 @@
+.show_page{
+  display: flex;
+}
+
+.left_content{
+  width: 45vw;
+}
+.left_header{
+  display: flex;
+
+  .user_icon {
+    img {
+      width: 50px;
+      border-radius: 50%;
+      border: 1px solid #51515196;
+    }
+  }
+
+  .left_body{
+    width: 40vw;
+    height: 40vh;
+  }
+}
