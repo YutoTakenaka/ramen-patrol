@@ -4,44 +4,44 @@
 
 
   <div class="field">
-    <%= f.label :image , "ラーメンの画像" %><br />
-    <span class="indispensable">必須</span>
+    <%= f.label :image , "ラーメンの画像" %>
+    <span class="indispensable">必須</span><br />
     <%= f.file_field :image, id:"ramen_image" %> 
   </div>
   
   <div class="field">
-    <%= f.label :ramen_name , "ラーメンの名称" %><br />
-    <span class="indispensable">必須</span>
-    <%= f.text_field :ramen_name, id:"ramen_name" %>
+    <%= f.label :ramen_name , "ラーメンの名称" %>
+    <span class="indispensable">必須</span><br />
+    <%= f.text_field :ramen_name, id:"ramen_name" ,class: :text_field%>
   </div>
 
   <div class="field">
-    <%= f.label :shop_name , "店名" %><br />
-    <span class="indispensable">必須</span>
-    <%= f.text_field :shop_name, id:"shop_name" %>
+    <%= f.label :shop_name , "店名" %>
+    <span class="indispensable">必須</span><br />
+    <%= f.text_field :shop_name, id:"shop_name" ,class: :text_field%>
   </div>
 
   <div class="field">
-    <%= f.label :place , "場所" %><br />
-    <span class="indispensable">必須</span>
-    <%= f.text_field :place, id:"place" %>
+    <%= f.label :place , "場所" %>
+    <span class="indispensable">必須</span><br />
+    <%= f.text_field :place, id:"place" ,class: :text_field %>
   </div>
 
   <div class="field">
-    <%= f.label :price , "値段" %><br />
-    <span class="indispensable">必須</span>
-    <%= f.text_field :price, id:"price" %>円
+    <%= f.label :price , "値段" %>
+    <span class="indispensable">必須</span><br />
+    <%= f.text_field :price, id:"price",class: :text_field %>円
   </div>
 
   <div class="field">
-    <%= f.label :soup_id , "スープ" %><br />
-    <span class="indispensable">必須</span>
+    <%= f.label :soup_id , "スープ" %>
+    <span class="indispensable">必須</span><br />
     <%= f.collection_select(:soup_id, Soup.all, :id, :name, {}, {class:"select-box", id:"soup"}) %>
   </div>
 
   <div class="field">
-    <%= f.label :noodle_id , "麺の太さ" %><br />
-    <span class="indispensable">必須</span>
+    <%= f.label :noodle_id , "麺の太さ" %>
+    <span class="indispensable">必須</span><br />
     <%= f.collection_select(:noodle_id, Noodle.all, :id, :name, {}, {class:"select-box", id:"noodle"}) %>
   </div>
 
