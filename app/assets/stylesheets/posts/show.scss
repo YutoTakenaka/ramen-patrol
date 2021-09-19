@@ -1,0 +1,64 @@
+.show_page{
+  display: flex;
+  border: solid 1px hsl(208, 11%, 77%);
+  margin: 30px 400px;
+}
+
+.left_content{
+  width: 800px;
+}
+
+.right_content{
+  width: 400px;
+  font-size: 22px;
+  
+}
+
+.right_header{
+ display: flex;
+ justify-content: space-between;
+ padding: 10px 0px 0px 10px;
+
+  .icon{
+    img {
+      width: 50px;
+      border-radius: 50%;
+      border: 1px solid #51515196;
+    }
+
+    .user_name {
+      padding-left: 15px;
+      width: 75%;
+    } 
+  }
+ 
+  .more {
+      color: gray;
+    img{
+      width: 30px;
+    }
+  }
+}
+
+.ramen_info{
+  margin: 10px;
+}
+
+.ramen_caption{
+  margin: 30px 10px;
+  
+}
+
+.actions{
+  margin: 10px;
+  color: gray;
+}
+
+.post_btn {
+  width: 200px;
+  text-align: center;
+  bottom: 40px;
+  right: 40px;
+  position: fixed;
+  padding: 15px;
+}

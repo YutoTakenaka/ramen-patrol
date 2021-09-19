@@ -2,10 +2,19 @@
 
   <div class="show_page">
     <div class="left_content">
-      <div class="left_header">
-        <%= link_to image_tag(@post.user.image ,size: '50x50'),"#",class:"user_icon" %>
-        <%= link_to @post.user.nickname, user_path(@post.user.id), class:"user_nickname" %>
+        <div class="ramen_img">
+          <%= link_to image_tag(@post.image),"#" %>
+        </div>
+    </div>
 
+    <div class="right_content">
+
+      <div class="right_header">  
+        <div class="icon">
+           <%= link_to image_tag(@post.user.image ,size: '50x50'),"#",class:"user_icon" %>
+          <%= link_to @post.user.nickname, user_path(@post.user.id), class:"user_name" %>
+        </div>  
+       
         <% if user_signed_in? && current_user.id == @post.user_id %>
           <div class="more">
             <%= image_tag 'show-btn.png',size: '50x50',class: :show_icon %>
@@ -20,39 +29,38 @@
           </div>
         <% end %>
       </div>
-      <div class="left_body">
-        <%= link_to image_tag(@post.image ,size: '600x500'),"#",class:"ramen_img" %>
-      </div>
-    </div>
 
-    <div class="right_content">
       <div class="ramen_info">
-        商品名:<%= @post.ramen_name %>
+        商品名 : <%= @post.ramen_name  %>
       </div>
       <div class="ramen_info">
-        店名:<%= @post.shop_name %>
+        店名 : <%= @post.shop_name %>
       </div>
       <div class="ramen_info">
-        場所:<%= @post.place %>
+        場所 : <%= @post.place %>
       </div>
       <div class="ramen_info">
-        値段:<%= @post.price %>
+        値段 : <%= @post.price %> 円
       </div>
       <div class="ramen_info">
-        スープ:<%= @post.soup.name %>
+        スープ : <%= @post.soup.name %>
       </div>
       <div class="ramen_info">
-        麺の太さ:<%= @post.noodle.name %>
+        麺の太さ : <%= @post.noodle.name %>
       </div>
-      <div class="ramen_info">
-        キャプション<br>
+      <div class="ramen_caption">
         <%= @post.caption %>
       </div>
+      <div class="actions">
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
     </div>
 
-    <div class="actions">
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
-    </div>
+    
+  </div>
+
+  <div class="post-btn">
+    <%= link_to image_tag('go-patrol.png'),new_post_path , class: 'post_btn'  %>
   </div>
 
 <%= render "shared/footer" %>

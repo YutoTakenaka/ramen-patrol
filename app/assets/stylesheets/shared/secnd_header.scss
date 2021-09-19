@@ -1,0 +1,13 @@
+  .header2 {
+    border-bottom: solid 1px hsl(208, 11%, 77%);
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      .logo2 {
+        height: 150px;
+        .RamenPatrol-icon2{
+          height: 140px;
+          margin-top: 10px;
+        }
+      }
+  }
