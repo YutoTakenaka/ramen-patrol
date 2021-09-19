@@ -1,7 +1,6 @@
 // ユーザー情報
 .user_info {
   display: flex;
-  border-bottom: solid 1px hsl(208, 11%, 77%);
 }
 
 .user_info_left {
@@ -32,6 +31,22 @@
   .post_amount {
     font-size: 20px;
     margin-left: 100px;
+  }
+}
+
+.empty{
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+  .empty1{
+    width: 25%;
+  }
+  .empty2{
+    border-bottom: solid 2px hsl(208, 11%, 77%);
+    width: 50%;
+  }
+  .empty3{
+    width: 25%;
   }
 }
 
