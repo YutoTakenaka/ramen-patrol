@@ -50,15 +50,22 @@ $color: #515151;
             border-radius: 50%;
             height: 100px;
             width: 100px;
+            border: solid 2px hsl(208, 11%, 77%);
           }
         }
-        &:nth-child(2) {
-          font-size: 25px;
-        
+        .logout{
+          font-size: 22px;
+          margin-left: 20px;
         }
-        &:nth-child(3) {
-          padding: 10px 25px;
-          font-size: 20px;
+
+        .login {
+          padding: 10px 0px;
+          font-size: 22px;
+        }
+
+        .sign-up{
+          font-size: 22px;
+          margin-left: 20px;
         }
       }
     }

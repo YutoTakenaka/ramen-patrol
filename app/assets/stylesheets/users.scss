@@ -9,6 +9,7 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
+    border: solid 2px hsl(208, 11%, 77%);
   }
 }
 
@@ -62,7 +63,7 @@
   padding: 30px 0;
   width: 100%;
   .content {
-    width: 30vw;
+    width: 30%;
     border: solid hsl(208, 11%, 77%) 2px;
     padding: 0 10px;
     box-sizing: border-box;
